@@ -1,0 +1,16 @@
+name: PyPI release
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  build_and_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Release
+      run: echo "RUNNING"
