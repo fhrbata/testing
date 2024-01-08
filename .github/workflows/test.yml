@@ -13,4 +13,4 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Release
-      run: echo "RUNNING"
+      run: echo "RUNNING" && git show HEAD
