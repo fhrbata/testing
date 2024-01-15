@@ -2,25 +2,11 @@ name: esp-idf-ci-action
 
 on:
   workflow_dispatch:
-    inputs:
-      command:
-        description: command to run
-        default: "idf.py build"
-        type: string
-        required: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: ESP-IDF Build
-        uses: espressif/esp-idf-ci-action@v1
-        with:
-          #          esp_idf_version: v5.0
-          #          target: esp32s2
-          #          path: '.'
-          command: ${{ inputs.command }}
+      - name: Test
+        run: echo -e "\rline1\x1b[K\rline2\x1b[K\rline3\x1b[K\nEND"
 
