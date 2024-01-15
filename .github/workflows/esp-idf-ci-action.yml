@@ -11,4 +11,5 @@ jobs:
         run: |
           echo -e "\rline1\x1b[K\rline2\x1b[K\rline3\x1b[K\nEND"
           python -c 'import sys; print(sys.stdout.isatty())'
+          echo -e "line1\r\nline2\r\nline3\r\n\nEND"
 
