@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run:
-          - echo -e "\rline1\x1b[K\rline2\x1b[K\rline3\x1b[K\nEND"
-          - python -c 'import sys; print(sys.stdout.isatty())'
+      - run: echo -e "\rline1\x1b[K\rline2\x1b[K\rline3\x1b[K\nEND"
+      - run: python -c 'import sys; print(sys.stdout.isatty())'
 
